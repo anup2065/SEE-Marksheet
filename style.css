@@ -11,7 +11,7 @@ body {
 
 form {
     background: url(./Back.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     border: 2px solid black;
     width: 100%;
     max-width: 800px;
