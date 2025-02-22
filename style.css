@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+form {
+    background: url(./Back.jpg) no-repeat center center;
+    background-size: cover;
+    border: 2px solid black;
+    width: 66%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px auto;
+}
+
+form * {
+    background: transparent;
+}
+
+.capital {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.d {
+    font-size: 20px;
+}
+
+.table {
+    text-transform: uppercase;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-heading {
+    font-weight: bold;
+}
+
+.p, p.reduced-space {
+    margin: 5px 0;
+}
+
+.reduce-space {
+    margin: 2px 0;
+}
+
+table td, table th {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+form p, form h1, form h3, form h4, form td, form th {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
