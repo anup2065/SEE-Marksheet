@@ -11,8 +11,7 @@ body {
 
 form {
     background: url(./Back.jpg) no-repeat center center;
-    background-size: 100% 100%; /* Scale the image to exactly fill the form */
-    background-clip: padding-box; /* Ensure the image stays inside the border */
+    background-size: cover;
     border: 2px solid black;
     width: 100%;
     max-width: 800px;
