@@ -69,6 +69,9 @@ p {
 
 /* Tablet styles */
 @media only screen and (max-width: 768px) {
+    /* avoid vertical center on smaller screens so content starts at top */
+    body { align-items: flex-start; padding-top: 20px; }
+
     form {
         padding: 12px;
         margin: 15px;
@@ -157,6 +160,71 @@ p {
     }
 }
 
+/* Very small devices: convert table into stacked cards for readability */
+@media only screen and (max-width: 480px) {
+    form { padding: 10px; margin: 8px; max-width: 98%; background-image: none; }
+
+    .table {
+        border: 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        background: #fff;
+        padding: 8px;
+    }
+
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        border: none;
+        border-bottom: 1px dashed #eee;
+        min-width: 0;
+    }
+
+    .table td:last-child {
+        border-bottom: 0;
+    }
+
+    .table td:before {
+        content: attr(data-label);
+        font-weight: 700;
+        margin-right: 8px;
+        text-transform: capitalize;
+        width: 40%;
+        color: #333;
+    }
+
+    /* Fallback for cells without data-label using nth-child */
+    .table tr td:nth-of-type(1):before { content: "Code"; }
+    .table tr td:nth-of-type(2):before { content: "Subjects"; }
+    .table tr td:nth-of-type(3):before { content: "Credit hour"; }
+    .table tr td:nth-of-type(4):before { content: "Grade"; }
+    .table tr td:nth-of-type(5):before { content: "Grade point"; }
+    .table tr td:nth-of-type(6):before { content: "Final grade"; }
+    .table tr td:nth-of-type(7):before { content: "Remarks"; }
+
+    table td, table th {
+        min-width: 0;
+    }
+
+    .d {
+        display: inline-block;
+        min-width: 75px;
+        font-size: 11px;
+    }
+}
+
+/* center tag fallback */
+center { display: block; text-align: center; }
+
 /* Print Styles */
 @media print {
     body {
@@ -169,9 +237,22 @@ p {
         padding: 0;
         width: 100%;
         max-width: 100%;
+        background: none;
     }
     
     table {
         font-size: 10pt !important;
+        border-collapse: collapse;
+    }
+
+    .table tr {
+        display: table-row;
+        border: none;
+        padding: 0;
+    }
+
+    .table td, .table th {
+        border: 1px solid #000;
+        padding: 4px;
     }
 }
