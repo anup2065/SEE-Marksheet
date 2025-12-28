@@ -66,49 +66,94 @@ p {
 }
 
 /* Enhanced Responsive Media Queries */
+
+/* Tablet styles */
+@media only screen and (max-width: 768px) {
+    form {
+        padding: 12px;
+        margin: 15px;
+        max-width: 90%;
+    }
+
+    h1 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+
+    .d {
+        font-size: 13px;
+        min-width: 110px;
+    }
+
+    table {
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 5px;
+        min-width: 55px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile styles */
 @media only screen and (max-width: 600px) {
     form {
         padding: 10px;
         margin: 10px;
+        max-width: 95%;
     }
-    
+
     h1 { font-size: 18px; }
     h3 { font-size: 16px; }
     h4 { font-size: 14px; }
-    
+
     .d {
         font-size: 12px;
         min-width: 100px;
     }
-    
+
     table {
         font-size: 11px;
         display: block;
         overflow-x: auto;
+        white-space: nowrap;
     }
-    
+
     th, td {
         padding: 4px;
         min-width: 50px;
     }
-    
+
     p {
         font-size: 12px;
     }
 }
 
+/* Small mobile styles */
 @media only screen and (max-width: 400px) {
     h1 { font-size: 16px; }
     h3 { font-size: 14px; }
-    
+    h4 { font-size: 12px; }
+
     .d {
         min-width: 90px;
         font-size: 11px;
     }
-    
+
     th, td {
         font-size: 10px;
         padding: 3px;
+        min-width: 45px;
+    }
+
+    p {
+        font-size: 11px;
     }
 }
 
